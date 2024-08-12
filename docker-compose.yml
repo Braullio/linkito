@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: simplify_transfer
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  swagger:
+    image: ghcr.io/swaggo/swag:latest
+    command: "run"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

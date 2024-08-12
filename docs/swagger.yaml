@@ -1,0 +1,15 @@
+externalDocs:
+  description: OpenAPI
+  url: https://swagger.io/resources/open-api/
+host: localhost:3000
+info:
+  contact: {}
+  description: Encurtador de URL.
+  license:
+    name: MIT License
+    url: https://opensource.org/license/MIT
+  termsOfService: http://swagger.io/terms/
+  title: Linkito API
+  version: "1.0"
+paths: {}
+swagger: "2.0"
